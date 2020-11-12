@@ -4,20 +4,15 @@ users = []
 passwords = []
 window = Tk()
 window.geometry("900x400")
-oop = Canvas(width = 900 , height = 400)
-oop.create_rectangle(0,0 , 900 ,400, fill = "black")
-oop.pack()
+window.config(bg = "black")
 lb1 = Label(text = " Hi there, Please log in down here " , font = "comicsansms 20 italic" , fg = "Red", bg = "Black" , borderwidth  = 7, relief  =SUNKEN )
 lb1.pack(fill = X , pady = 10)
 k = StringVar()
 l = StringVar()
-
-
-
-tex1  = Label( text = "USERNAME :  " , fg = "white" , font = "comicsansms 13 italic")
+tex1  = Label( text = "USERNAME :  " , fg = "white" , bg = "black", font = "comicsansms 13 italic")
 tex1.pack(side = TOP)
 usrn = Entry(textvariable = k).pack(side = TOP , fill = X , padx =200)
-tex2  = Label( text = "PASSWORD :  " , fg = "white" , font = "comicsansms 13 italic")
+tex2  = Label( text = "PASSWORD :  " , fg = "white" , bg ="black", font = "comicsansms 13 italic")
 tex2.pack(side = TOP)
 uspa = Entry(textvariable = l).pack(side = TOP , fill = X , padx = 200)
 def get():
@@ -34,8 +29,7 @@ def get():
     root.mainloop()
     print(users)
     print(passwords)
-
-   
+    print(users)
 
 
 bt = Button(text = "Please Submit" , font = "comicsansms 17 bold italic", fg = "red" , bg= "grey" , command = get)
@@ -48,5 +42,6 @@ def lea(e):
 bt.bind("<Enter>" , ent)
 bt.bind("<Leave>" , lea)
 bt.pack(side = TOP , pady =20)
+print(users)
 
 window.mainloop()
